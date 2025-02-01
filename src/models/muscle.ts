@@ -1,21 +1,34 @@
 export type MuscleCategory = "upper" | "lower" | "core" | "full";
 
-export type MuscleDivision = {};
+export type MuscleDivision = {
+  longName: string;
+  shortName: string;
+};
 
 export type Muscle = {
   name: string;
-  divisions: string[];
+  divisions: MuscleDivision[];
   category: MuscleCategory;
   group?: string;
+};
+
+export type Exercise = {
+  name: string;
 };
 
 export const muscles: Muscle[] = [
   {
     name: "Biceps",
     divisions: [
-      "Biceps Brachii (Long Head)",
-      "Biceps Brachii (Short Head)",
-      "Brachialis",
+      {
+        longName: "Biceps Brachii - Long Head",
+        shortName: "Long Head",
+      },
+      {
+        longName: "Biceps Brachii - Short Head",
+        shortName: "Short Head",
+      },
+      { longName: "Brachialis", shortName: "Brachialis" },
     ],
     category: "upper",
     group: "Arms",
@@ -23,25 +36,34 @@ export const muscles: Muscle[] = [
   {
     name: "Triceps",
     divisions: [
-      "Triceps Brachii (Long Head)",
-      "Triceps Brachii (Lateral Head)",
-      "Triceps Brachii (Medial Head)",
+      { longName: "Triceps Brachii - Long Head", shortName: "Long Head" },
+      { longName: "Triceps Brachii - Lateral Head", shortName: "Lateral Head" },
+      { longName: "Triceps Brachii - Medial Head", shortName: "Medial Head" },
     ],
     category: "upper",
     group: "Arms",
   },
   {
     name: "Forearms",
-    divisions: ["Anterior Compartment", "Posterior Compartment"],
+    divisions: [
+      { longName: "Anterior Compartment", shortName: "Anterior" },
+      { longName: "Posterior Compartment", shortName: "Posterior" },
+    ],
     category: "upper",
     group: "Arms",
   },
   {
     name: "Chest",
     divisions: [
-      "Pectoralis Major (Clavicular Head)",
-      "Pectoralis Major (Sternal Head)",
-      "Pectoralis Minor",
+      {
+        longName: "Pectoralis Major - Clavicular Head",
+        shortName: "Clavicular Head",
+      },
+      {
+        longName: "Pectoralis Major - Sternal Head",
+        shortName: "Sternal Head",
+      },
+      { longName: "Pectoralis Minor", shortName: "Minor" },
     ],
     category: "upper",
     group: "Arms",
@@ -49,22 +71,22 @@ export const muscles: Muscle[] = [
   {
     name: "Shoulders",
     divisions: [
-      "Anterior Deltoid",
-      "Lateral Deltoid",
-      "Posterior Deltoid",
-      "Supraspinatus",
-      "Infraspinatus",
-      "Teres Minor",
-      "Subscapularis",
+      { longName: "Anterior Deltoid", shortName: "Anterior Deltoid" },
+      { longName: "Lateral Deltoid", shortName: "Lateral Deltoid" },
+      { longName: "Rear Deltoid", shortName: "Rear Deltoid" },
+      { longName: "Supraspinatus", shortName: "Supraspinatus" },
+      { longName: "Infraspinatus", shortName: "Infraspinatus" },
+      { longName: "Teres Minor", shortName: "Minor" },
+      { longName: "Subscapularis", shortName: "Subscapularis" },
     ],
     category: "upper",
   },
   {
     name: "Lats",
     divisions: [
-      "Thoracic Fibers - Upper",
-      "Lumbar Fibers - Middle",
-      "Iliac Fibers - Lower",
+      { longName: "Thoracic Fibers - Upper", shortName: "Upper" },
+      { longName: "Lumbar Fibers - Middle", shortName: "Middle" },
+      { longName: "Iliac Fibers - Lower", shortName: "Lower" },
     ],
     category: "upper",
     group: "Back",
@@ -72,11 +94,11 @@ export const muscles: Muscle[] = [
   {
     name: "Upper Back",
     divisions: [
-      "Trapezius (Upper)",
-      "Trapezius (Middle)",
-      "Trapezius (Lower)",
-      "Rhomboid Major",
-      "Rhomboid Minor",
+      { longName: "Trapezius - Upper", shortName: "Upper" },
+      { longName: "Trapezius - Middle", shortName: "Middle" },
+      { longName: "Trapezius - Lower", shortName: "Lower" },
+      { longName: "Rhomboid Major", shortName: "Rhomboid Major" },
+      { longName: "Rhomboid Minor", shortName: "Rhomboid Minor" },
     ],
     category: "upper",
     group: "Back",
@@ -84,9 +106,9 @@ export const muscles: Muscle[] = [
   {
     name: "Lower Back",
     divisions: [
-      "Erector Spinae (Iliocostalis)",
-      "Erector Spinae (Longissimus)",
-      "Erector Spinae (Spinalis)",
+      { longName: "Erector Spinae - Iliocostalis", shortName: "Iliocostalis" },
+      { longName: "Erector Spinae - Longissimus", shortName: "Longissimus" },
+      { longName: "Erector Spinae - Spinalis", shortName: "Spinalis" },
     ],
     category: "upper",
     group: "Back",
@@ -94,69 +116,90 @@ export const muscles: Muscle[] = [
   {
     name: "Abs",
     divisions: [
-      "Rectus Abdominis",
-      "External Obliques",
-      "Internal Obliques",
-      "Transverse Abdominis",
+      { longName: "Rectus Abdominis", shortName: "Rectus" },
+      { longName: "External Obliques", shortName: "External" },
+      { longName: "Internal Obliques", shortName: "Internal" },
+      { longName: "Transverse Abdominis", shortName: "Transverse" },
     ],
     category: "core",
     group: "Core",
   },
   {
     name: "Glutes",
-    divisions: ["Gluteus Maximus", "Gluteus Medius", "Gluteus Minimus"],
+    divisions: [
+      { longName: "Gluteus Maximus", shortName: "Maximus" },
+      { longName: "Gluteus Medius", shortName: "Medius" },
+      { longName: "Gluteus Minimus", shortName: "Minimus" },
+    ],
     category: "lower",
     group: "Legs",
   },
   {
     name: "Hamstrings",
-    divisions: ["Biceps Femoris", "Semitendinosus", "Semimembranosus"],
+    divisions: [
+      { longName: "Biceps Femoris", shortName: "Femoris" },
+      { longName: "Semitendinosus", shortName: "Semitendinosus" },
+      { longName: "Semimembranosus", shortName: "Semimembranosus" },
+    ],
     category: "lower",
     group: "Legs",
   },
   {
     name: "Calves",
-    divisions: ["Gastrocnemius", "Soleus"],
+    divisions: [
+      { longName: "Gastrocnemius", shortName: "Gastrocnemius" },
+      { longName: "Soleus", shortName: "Soleus" },
+    ],
     category: "lower",
     group: "Legs",
   },
   {
     name: "Quads",
     divisions: [
-      "Vastus Medialis",
-      "Vastus Lateralis",
-      "Vastus Intermedius",
-      "Rectus Femoris",
+      { longName: "Vastus Medialis", shortName: "Medialis" },
+      { longName: "Vastus Lateralis", shortName: "Lateralis" },
+      { longName: "Vastus Intermedius", shortName: "Intermedius" },
+      { longName: "Rectus Femoris", shortName: "Rec Fem" },
     ],
     category: "lower",
     group: "Legs",
   },
   {
     name: "Hip Flexors",
-    divisions: ["Psoas Major", "Iliacus"],
+    divisions: [
+      { longName: "Psoas Major", shortName: "Psoas" },
+      { longName: "Iliacus", shortName: "Iliacus" },
+    ],
     category: "lower",
     group: "Legs",
   },
   {
     name: "Hip Extensors",
-    divisions: ["Gluteus Maximus", "Hamstrings"],
+    divisions: [
+      { longName: "Gluteus Maximus", shortName: "Maximus" },
+      { longName: "Hamstrings", shortName: "Hamstrings" },
+    ],
     category: "lower",
     group: "Legs",
   },
   {
     name: "Hip Abductors",
-    divisions: ["Gluteus Medius", "Gluteus Minimus", "Tensor Fasciae Latae"],
+    divisions: [
+      { longName: "Gluteus Medius", shortName: "Medius" },
+      { longName: "Gluteus Minimus", shortName: "Minimus" },
+      { longName: "Tensor Fasciae Latae", shortName: "Tensor" },
+    ],
     category: "lower",
     group: "Legs",
   },
   {
     name: "Hip Rotators",
     divisions: [
-      "Piriformis",
-      "Obturator Internus",
-      "Gemellus Superior",
-      "Gemellus Inferior",
-      "Quadratus Femoris",
+      { longName: "Piriformis", shortName: "Piriformis" },
+      { longName: "Obturator Internus", shortName: "Obturator" },
+      { longName: "Gemellus Superior", shortName: "Gemellus" },
+      { longName: "Gemellus Inferior", shortName: "Gemellus" },
+      { longName: "Quadratus Femoris", shortName: "Quadratus" },
     ],
     category: "lower",
     group: "Legs",
