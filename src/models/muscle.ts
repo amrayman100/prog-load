@@ -1,4 +1,4 @@
-export type MuscleCategory = "upper" | "lower" | "core" | "full";
+export type MuscleCategory = "upper" | "lower" | "core";
 
 export type MuscleDivision = {
   longName: string;
@@ -12,8 +12,38 @@ export type Muscle = {
   group?: string;
 };
 
+export type ExerciseTarget = {
+  name: string;
+  divisions: MuscleDivision[];
+};
+
+export type ExerciseMode = "unilateral" | "bilateral";
+export type ExceriseLoading =
+  | "selectorized"
+  | "plate-loaded"
+  | "body-weight"
+  | "band-loaded";
+
+export type LoadingScale = "kg" | "lbs" | "plate-number";
+
 export type Exercise = {
   name: string;
+  excerciseCode: string;
+  brand: string;
+  majorTargets: ExerciseTarget[];
+  minorTargets: ExerciseTarget[];
+  modes: ExerciseMode[];
+  loading: ExceriseLoading;
+  loadingScale: LoadingScale;
+};
+
+export type ExerciseRep = {
+  excerciseCode: string;
+  mode: ExerciseMode;
+  setNumber: number;
+  reps: number;
+  weight: number;
+  weightScale: LoadingScale;
 };
 
 export const muscles: Muscle[] = [
