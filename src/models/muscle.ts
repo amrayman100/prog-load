@@ -22,14 +22,16 @@ export type ExceriseLoading =
   | "selectorized"
   | "plate-loaded"
   | "body-weight"
-  | "band-loaded";
+  | "band-loaded"
+  | "dumbell-loaded";
 
-export type LoadingScale = "kg" | "lbs" | "plate-number";
+export type LoadingScale = "plate-weight" | "plate-number" | "band-weight";
 
 export type Exercise = {
   name: string;
   excerciseCode: string;
   brand: string;
+  type: "upper" | "lower" | "core";
   majorTargets: ExerciseTarget[];
   minorTargets: ExerciseTarget[];
   modes: ExerciseMode[];
@@ -45,6 +47,138 @@ export type ExerciseRep = {
   weight: number;
   weightScale: LoadingScale;
 };
+
+export type UpperBodyExercise = Exercise & {
+  type: "upper";
+};
+
+// planes
+
+export const upperBodyExercises: UpperBodyExercise[] = [
+  {
+    name: "Preacher Curl Machine",
+    brand: "Hoist",
+    majorTargets: [
+      {
+        name: "Biceps",
+        divisions: [
+          { longName: "Biceps Brachii - Long Head", shortName: "Long Head" },
+          { longName: "Biceps Brachii - Short Head", shortName: "Short Head" },
+          { longName: "Brachialis", shortName: "Brachialis" },
+        ],
+      },
+    ],
+    minorTargets: [],
+    modes: ["unilateral", "bilateral"],
+    loading: "plate-loaded",
+    loadingScale: "plate-weight",
+    type: "upper",
+    excerciseCode: "HOIST_PREACHER_CURL",
+  },
+  {
+    name: "Seated Dip",
+    brand: "Hoist",
+    majorTargets: [
+      {
+        name: "Triceps",
+        divisions: [
+          // { longName: "Triceps Brachii - Long Head", shortName: "Long Head" },
+          {
+            longName: "Triceps Brachii - Lateral Head",
+            shortName: "Lateral Head",
+          },
+          {
+            longName: "Triceps Brachii - Medial Head",
+            shortName: "Medial Head",
+          },
+        ],
+      },
+    ],
+    minorTargets: [
+      {
+        name: "Chest",
+        divisions: [
+          {
+            longName: "Pectoralis Major - Clavicular Head",
+            shortName: "Clavicular Head",
+          },
+          {
+            longName: "Pectoralis Major - Sternal Head",
+            shortName: "Sternal Head",
+          },
+          { longName: "Pectoralis Minor", shortName: "Minor" },
+        ],
+      },
+    ],
+    modes: ["unilateral", "bilateral"],
+    loading: "plate-loaded",
+    loadingScale: "plate-weight",
+    type: "upper",
+    excerciseCode: "HOIST_SEATED_DIP",
+  },
+  {
+    name: "T-Bar Row Chest Supported",
+    brand: "Flex Fitness",
+    majorTargets: [
+      {
+        name: "Upper Back",
+        divisions: [
+          { longName: "Trapezius - Upper", shortName: "Upper" },
+          { longName: "Trapezius - Middle", shortName: "Middle" },
+          { longName: "Trapezius - Lower", shortName: "Lower" },
+        ],
+      },
+      {
+        name: "Shoulders",
+        divisions: [{ longName: "Rear Deltoid", shortName: "Rear" }],
+      },
+    ],
+    minorTargets: [
+      {
+        name: "Lats",
+        divisions: [
+          { longName: "Thoracic Fibers - Upper", shortName: "Upper" },
+          { longName: "Lumbar Fibers - Middle", shortName: "Middle" },
+          { longName: "Iliac Fibers - Lower", shortName: "Lower" },
+        ],
+      },
+    ],
+    modes: ["bilateral"],
+    loading: "plate-loaded",
+    loadingScale: "plate-weight",
+    type: "upper",
+    excerciseCode: "FLEX_T_BAR_ROW_CHEST_SUPPORTED",
+  },
+  {
+    name: "Seated Shoulder Press Machine",
+    brand: "Panatta",
+    majorTargets: [
+      {
+        name: "Shoulders",
+        divisions: [
+          { longName: "Anterior Deltoid", shortName: "Anterior" },
+          { longName: "Lateral Deltoid", shortName: "Lateral" },
+        ],
+      },
+    ],
+    minorTargets: [
+      {
+        name: "Chest",
+        divisions: [
+          {
+            longName: "Pectoralis Major - Clavicular Head",
+            shortName: "Upper Chest",
+          },
+        ],
+      },
+    ],
+    modes: ["bilateral"],
+    loading: "plate-loaded",
+    loadingScale: "plate-weight",
+    type: "upper",
+    excerciseCode: "PANATTA_SEATED_SHOULDER_PRESS",
+  },
+];
 
 export const muscles: Muscle[] = [
   {
@@ -87,13 +221,13 @@ export const muscles: Muscle[] = [
     divisions: [
       {
         longName: "Pectoralis Major - Clavicular Head",
-        shortName: "Clavicular Head",
+        shortName: "Upper Chest",
       },
       {
         longName: "Pectoralis Major - Sternal Head",
-        shortName: "Sternal Head",
+        shortName: "Middle Chest",
       },
-      { longName: "Pectoralis Minor", shortName: "Minor" },
+      { longName: "Pectoralis Minor", shortName: "Lower Chest" },
     ],
     category: "upper",
     group: "Arms",
