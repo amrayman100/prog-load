@@ -27,13 +27,16 @@ export type ExceriseLoading =
 
 export type LoadingScale = "plate-weight" | "plate-number" | "band-weight";
 
+// planes, loading pattern,
+
+// pronated grip, supinated grip, neutral grip
+// sagittal, frontal, transverse
+
 export type Exercise = {
   name: string;
   excerciseCode: string;
   brand: string;
   type: "upper" | "lower" | "core";
-  majorTargets: ExerciseTarget[];
-  minorTargets: ExerciseTarget[];
   modes: ExerciseMode[];
   loading: ExceriseLoading;
   loadingScale: LoadingScale;
@@ -48,135 +51,171 @@ export type ExerciseRep = {
   weightScale: LoadingScale;
 };
 
-export type UpperBodyExercise = Exercise & {
-  type: "upper";
+export type LoadingPattern = {
+  plane: "sagittal" | "frontal" | "transverse" | "default";
+  grip: "pronated" | "supinated" | "neutral" | "default";
+  majorTargets: ExerciseTarget[];
+  minorTargets: ExerciseTarget[];
 };
 
-// planes
+export type UpperBodyExercise = Exercise & {
+  type: "upper";
+  loadingPatterns: Array<LoadingPattern>;
+};
 
 export const upperBodyExercises: UpperBodyExercise[] = [
   {
     name: "Preacher Curl Machine",
     brand: "Hoist",
-    majorTargets: [
-      {
-        name: "Biceps",
-        divisions: [
-          { longName: "Biceps Brachii - Long Head", shortName: "Long Head" },
-          { longName: "Biceps Brachii - Short Head", shortName: "Short Head" },
-          { longName: "Brachialis", shortName: "Brachialis" },
-        ],
-      },
-    ],
-    minorTargets: [],
     modes: ["unilateral", "bilateral"],
     loading: "plate-loaded",
     loadingScale: "plate-weight",
     type: "upper",
     excerciseCode: "HOIST_PREACHER_CURL",
+    loadingPatterns: [
+      {
+        plane: "sagittal",
+        grip: "neutral",
+        majorTargets: [
+          {
+            name: "Biceps",
+            divisions: [
+              {
+                longName: "Biceps Brachii - Long Head",
+                shortName: "Long Head",
+              },
+              {
+                longName: "Biceps Brachii - Short Head",
+                shortName: "Short Head",
+              },
+              { longName: "Brachialis", shortName: "Brachialis" },
+            ],
+          },
+        ],
+        minorTargets: [],
+      },
+    ],
   },
   {
     name: "Seated Dip",
     brand: "Hoist",
-    majorTargets: [
-      {
-        name: "Triceps",
-        divisions: [
-          // { longName: "Triceps Brachii - Long Head", shortName: "Long Head" },
-          {
-            longName: "Triceps Brachii - Lateral Head",
-            shortName: "Lateral Head",
-          },
-          {
-            longName: "Triceps Brachii - Medial Head",
-            shortName: "Medial Head",
-          },
-        ],
-      },
-    ],
-    minorTargets: [
-      {
-        name: "Chest",
-        divisions: [
-          {
-            longName: "Pectoralis Major - Clavicular Head",
-            shortName: "Clavicular Head",
-          },
-          {
-            longName: "Pectoralis Major - Sternal Head",
-            shortName: "Sternal Head",
-          },
-          { longName: "Pectoralis Minor", shortName: "Minor" },
-        ],
-      },
-    ],
     modes: ["unilateral", "bilateral"],
     loading: "plate-loaded",
     loadingScale: "plate-weight",
     type: "upper",
     excerciseCode: "HOIST_SEATED_DIP",
+    loadingPatterns: [
+      {
+        plane: "sagittal",
+        grip: "neutral",
+        majorTargets: [
+          {
+            name: "Triceps",
+            divisions: [
+              // { longName: "Triceps Brachii - Long Head", shortName: "Long Head" },
+              {
+                longName: "Triceps Brachii - Lateral Head",
+                shortName: "Lateral Head",
+              },
+              {
+                longName: "Triceps Brachii - Medial Head",
+                shortName: "Medial Head",
+              },
+            ],
+          },
+        ],
+        minorTargets: [
+          {
+            name: "Chest",
+            divisions: [
+              {
+                longName: "Pectoralis Major - Clavicular Head",
+                shortName: "Clavicular Head",
+              },
+              {
+                longName: "Pectoralis Major - Sternal Head",
+                shortName: "Sternal Head",
+              },
+              { longName: "Pectoralis Minor", shortName: "Minor" },
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     name: "T-Bar Row Chest Supported",
     brand: "Flex Fitness",
-    majorTargets: [
-      {
-        name: "Upper Back",
-        divisions: [
-          { longName: "Trapezius - Upper", shortName: "Upper" },
-          { longName: "Trapezius - Middle", shortName: "Middle" },
-          { longName: "Trapezius - Lower", shortName: "Lower" },
-        ],
-      },
-      {
-        name: "Shoulders",
-        divisions: [{ longName: "Rear Deltoid", shortName: "Rear" }],
-      },
-    ],
-    minorTargets: [
-      {
-        name: "Lats",
-        divisions: [
-          { longName: "Thoracic Fibers - Upper", shortName: "Upper" },
-          { longName: "Lumbar Fibers - Middle", shortName: "Middle" },
-          { longName: "Iliac Fibers - Lower", shortName: "Lower" },
-        ],
-      },
-    ],
     modes: ["bilateral"],
     loading: "plate-loaded",
     loadingScale: "plate-weight",
     type: "upper",
     excerciseCode: "FLEX_T_BAR_ROW_CHEST_SUPPORTED",
-  },
-  {
-    name: "Seated Shoulder Press Machine",
-    brand: "Panatta",
-    majorTargets: [
+    loadingPatterns: [
       {
-        name: "Shoulders",
-        divisions: [
-          { longName: "Anterior Deltoid", shortName: "Anterior" },
-          { longName: "Lateral Deltoid", shortName: "Lateral" },
-        ],
-      },
-    ],
-    minorTargets: [
-      {
-        name: "Chest",
-        divisions: [
+        plane: "frontal",
+        grip: "neutral",
+        majorTargets: [
           {
-            longName: "Pectoralis Major - Clavicular Head",
-            shortName: "Upper Chest",
+            name: "Upper Back",
+            divisions: [
+              { longName: "Trapezius - Upper", shortName: "Upper" },
+              { longName: "Trapezius - Middle", shortName: "Middle" },
+              { longName: "Trapezius - Lower", shortName: "Lower" },
+            ],
+          },
+          {
+            name: "Shoulders",
+            divisions: [{ longName: "Rear Deltoid", shortName: "Rear" }],
+          },
+        ],
+        minorTargets: [
+          {
+            name: "Lats",
+            divisions: [
+              { longName: "Thoracic Fibers - Upper", shortName: "Upper" },
+              { longName: "Lumbar Fibers - Middle", shortName: "Middle" },
+              { longName: "Iliac Fibers - Lower", shortName: "Lower" },
+            ],
           },
         ],
       },
     ],
+  },
+  {
+    name: "Seated Shoulder Press Machine",
+    brand: "Panatta",
     modes: ["bilateral"],
     loading: "plate-loaded",
     loadingScale: "plate-weight",
     type: "upper",
     excerciseCode: "PANATTA_SEATED_SHOULDER_PRESS",
+    loadingPatterns: [
+      {
+        plane: "frontal",
+        grip: "neutral",
+        majorTargets: [
+          {
+            name: "Shoulders",
+            divisions: [
+              { longName: "Anterior Deltoid", shortName: "Anterior" },
+              { longName: "Lateral Deltoid", shortName: "Lateral" },
+            ],
+          },
+        ],
+        minorTargets: [
+          {
+            name: "Chest",
+            divisions: [
+              {
+                longName: "Pectoralis Major - Clavicular Head",
+                shortName: "Upper Chest",
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
 ];
 
