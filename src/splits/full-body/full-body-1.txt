@@ -7,5 +7,26 @@ Full Body A
     6- Chest Press 1 working set
     7- Lying Leg Curl Machine 1 working set
     8- Leg Extension Machine 1 working set
+    9- Traps Shrug 1 working set
 
 Full Body B
+    1- Hoist Preacher Curl Unilateral 1 working set
+    2- Triceps Arm Extension 1 working set
+    3- Seated Calf Raise Machine 1 working set
+    4- Panatta Shoulder Press 1 working set
+    5- Low Row Machine 1 working set
+    6- Leg Extension Machine 1 working set
+    7- Adductor Machine 1 working set
+    8- Glute Kickback Machine 1 working set
+    9- Chest Fly 1 working set
+
+Full Body C
+    1- Cybex Hack Squat 1 working set
+    2- Hoist Preacher Curl Unilateral 1 working set
+    3- Hoist Seated Dip Machine 1 working set
+    4- T-Bar Row 1 working set
+    5- Seated Leg Curl Machine 1 working set
+    6- Lateral Raise Machine 1 working set
+    7- Lat Pull Down Sagittal Plane 1 working set
+    8- Seated Calf Raise Machine 1 working set
+    9- Glute Abduction Machine 1 working set
