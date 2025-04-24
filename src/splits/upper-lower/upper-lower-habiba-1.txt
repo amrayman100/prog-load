@@ -1,0 +1,83 @@
+Terminology:
+    Split: A split is a how to organize the workout through the week, the split we are using is an upper-lower split.
+    Rep: A rep is a single execution of the movement.
+    Rep Range: A rep range is the number of reps you do in a set.
+    Set: A set is a group of reps done consecutively.
+    Load: Load is the weight you lift in a set.
+    Warmup: A warmup is a set of reps done at a lighter weight to get the muscles warm and ready for the working sets.
+    Working set: A working set is a set of reps done at a heavier weight to stimulate muscle growth.
+    Volume: Volume is the total number of sets done in a workout or training week.
+    Frequency: Frequency is how many times a week you train a muscle.
+    Failure: Failure is when you can no longer perform the movement.
+    RIR/Reps in Reserve: RIR/Reps in Reserve is the number of reps you can do in a set until you reach failure.
+    0-2 RIR: 0-2 RIR is when you can do 0-2 reps in a set until you reach failure.
+    Progressive Overload: Progressive Overload is when you increase the weight or number of reps in an exercise.
+
+Our training approach will follow a high intesity, high frequency approach, with 2x frequency per week focusing on progressive overload to measure progress.
+After the acclimation period most excersis will be performed with high intensity heavy loads in the 4-8 rep range.
+
+Upper Body A
+1- Lat Pull down 1-3 warmup sets, 2 working sets
+2- Dumbell Shoulder Press 1-3 warmup sets, 2 working sets
+3- Dumbell Bench Row 1-3 warmup sets, 2 working sets
+4- Dumbell Bench Press 1-3 warmup sets, 2 working sets
+5- Seated Alternate Bicep Curl 1-3 warmup sets, 2 working sets
+6- Tricep Cable Extension 1-3 warmup sets, 2 working sets
+
+Lower Body A
+1- Barbell Hip Thrust 1-3 warmup sets, 2 working sets
+2- Dumbell Squat 1-3 warmup sets, 2 working sets
+3- 45 Extension 1-3 warmup sets, 2 working sets
+4- Leg Extension 1-3 warmup sets, 2 working sets
+5- Dumbell RDL 1-3 warmup sets, 2 working sets
+6- Cable Ab Crunches 1-3 warmup sets, 2 working sets
+
+Upper Body B
+1- Dumbell Shoulder Press 1-3 warmup sets, 2 working sets
+2- Lat Pull down 1-3 warmup sets, 2 working sets
+3- Dumbell Bench Press 1-3 warmup sets, 2 working sets
+4- Dumbell Bench Row 1-3 warmup sets, 2 working sets
+5- Tricep Cable Extension 1-3 warmup sets, 2 working sets
+6- Seated Alternate Bicep Curl 1-3 warmup sets, 2 working sets
+
+Lower Body B
+1- Barbell Hip Thrust 1-3 warmup sets, 2 working sets
+2- Dumbell Squat 1-3 warmup sets, 2 working sets
+3- 45 Extension 1-3 warmup sets, 2 working sets
+4- Leg Extension 1-3 warmup sets, 2 working sets
+5- Dumbell RDL 1-3 warmup sets, 2 working sets
+6- Cable Ab Crunches 1-3 warmup sets, 2 working sets
+
+Week 1
+For week 1 this is an acclimation week.
+The focus is on getting used to the movements and the weight.
+So we go with 1 warmup set and 2 working sets for each exercise.
+Working sets are 10 reps with moderate weight.
+
+
+Excersise Guides:
+
+Upper Body:
+1- Lat Pull down => https://youtu.be/NAIEnMjN-6w?si=_qNEBMeKJKKiXUfK
+2- Dumbell Shoulder Press => https://youtube.com/shorts/E9ShwbwZ1zw?si=Qq0W_XC5tMUldLoE
+3- Dumbell Bench Row => https://www.youtube.com/watch?v=BzPuC0X69Kg
+4- Dumbell Bench Press => https://youtube.com/shorts/5orOHJL2qS4?si=tEN4LKg5rY4FuTOR
+5- Seated Alternate Bicep Curl => https://youtube.com/shorts/16v_0ET03Oo?si=B4_XJLuTtL5XtMVx
+6- Tricep Cable Extension => https://youtu.be/LXkCrxn3caQ?si=eV33VPwk1YYaot8v
+
+Lower Body:
+1- Barbell Hip Thrust => https://www.youtube.com/watch?v=IsRvL3rD_XM&t=198s
+2- Dumbell Squat => https://youtube.com/shorts/0gNqaP5B818?si=eBhR2uBqeHeBlZyZ
+3- 45 Extension => https://www.youtube.com/watch?v=Cvw5Lzk8-pk , when you start adding weights => https://www.youtube.com/shorts/vFn3GQm4NQs
+4- Leg Extension => https://youtube.com/shorts/w72YiHz15CA?si=QGUs0Pl-TS6GXsep
+5- Dumbell RDL => https://www.youtube.com/watch?v=WIcpu2UkJoY , https://www.youtube.com/watch?v=ZEnWV4kguKc
+6- Cable Ab Crunches => https://www.youtube.com/watch?v=3qjoXDTuyOE
+
+Basic Working week:
+    Day 1- Upper Body A
+    Day 2- Lower Body A
+    Day 3- Rest
+    Day 4- Upper Body B
+    Day 5- Lower Body B
+    Day 6- Rest
+    Day 7- Rest
