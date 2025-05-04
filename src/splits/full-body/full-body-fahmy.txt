@@ -1,0 +1,60 @@
+Terminology:
+    Split: A split is a how to organize the workout through the week, the split we are using is a Full Body Split.
+    Rep: A rep is a single execution of the movement.
+    Rep Range: A rep range is the number of reps you do in a set.
+    Set: A set is a group of reps done consecutively.
+    Load: Load is the weight you lift in a set.
+    Warmup: A warmup is a set of reps done at a lighter weight to get the muscles warm and ready for the working sets.
+    Working set: A working set is a set of reps done at a heavier weight to stimulate muscle growth.
+    Volume: Volume is the total number of sets done in a workout or training week.
+    Frequency: Frequency is how many times a week you train a muscle.
+    Failure: Failure is when you can no longer perform the movement.
+    RIR/Reps in Reserve: RIR/Reps in Reserve is the number of reps you can do in a set until you reach failure.
+    0-2 RIR: 0-2 RIR is when you can do 0-2 reps in a set until you reach failure.
+    Progressive Overload: Progressive Overload is when you increase the weight or number of reps in an exercise.
+
+Our training approach will follow a high intesity, high frequency approach, with 2x frequency per week focusing on progressive overload to measure progress.
+After the acclimation period most excersis will be performed with high intensity heavy loads in the 4-8 rep range.
+
+
+Full Body A
+1- Seated Leg Curl 1-3 warmup sets, 2 working sets
+2- Leg Press 1-3 warmup sets, 2 working sets
+3- Seated Calf Raise 1-3 warmup sets, 2 working sets
+4- Leg Extension 1-3 warmup sets, 2 working sets
+5- Incline Chest Press 1-3 warmup sets, 2 working sets
+6- Machine Row Wide Grip 1-3 warmup sets, 2 working sets
+7- Cable Tricep Extension 1-3 warmup sets, 2 working sets
+
+Full Body B
+1- Lat Pull Down 1-3 warmup sets, 2 working sets
+2- Leg Extension 1-3 warmup sets, 2 working sets
+3- Shoulder Press machine 1-3 warmup sets, 2 working sets
+4- Bicep Cable Curl 1-3 warmup sets, 2 working sets
+5- Seated Leg Curl 1-3 warmup sets, 2 working sets
+6- Glute Abduction 1-3 warmup sets, 2 working sets
+7- Hip Adduction 1-3 warmup sets, 2 working sets
+
+Full Body C
+1- Seated Leg Curl 1-3 warmup sets, 2 working sets
+2- Leg Press 1-3 warmup sets, 2 working sets
+3- Seated Calf Raise 1-3 warmup sets, 2 working sets
+4- Leg Extension 1-3 warmup sets, 2 working sets
+5- Incline Chest Press 1-3 warmup sets, 2 working sets
+6- Machine Row Narrow Grip 1-3 warmup sets, 2 working sets
+7- Biceps Dumbell Curl Alternating 1-3 warmup sets, 2 working sets
+
+Week 1
+For week 1 this is an acclimation week.
+The focus is on getting used to the movements and the weight.
+So we go with 1 warmup set and 2 working sets for each exercise.
+Working sets are 10 reps with moderate weight.
+
+Basic Working week:
+    Day 1- Full Body A
+    Day 2- Rest
+    Day 3- Full Body B
+    Day 4- Rest
+    Day 5- Rest
+    Day 6- Full Body C
+    Day 7- Rest
